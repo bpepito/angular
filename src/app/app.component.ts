@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UserService } from './user/services/user.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular';
+  showBlog = true;
+
+  constructor(private userService: UserService) {
+    console.log(userService.getDataFromServer());
+  }
+
+  toggleShowBlog() {
+    this.showBlog = !this.showBlog;
+  }
 }
