@@ -5,22 +5,14 @@ import { BookComponent } from './book/book.component';
 
 const routes: Routes = [
   {
-    path:'',
+    path: '',
     redirectTo: 'blog',
-    pathMatch: 'prefix',
-},
-{
+    pathMatch: 'full', 
+  },
+  {
     path: 'blog',
-    component: BlogComponent,
-},
-{
-    path: 'book',
-    component: BookComponent,
-},
-{
-    path: 'user',
-    loadChildren: () => import('./user/user.module').then(m => m.UserModule)
-},
+    loadChildren: () => import('./modules/blog/blog.module').then(m => m.BlogModule)
+  }
 ];
 
 @NgModule({

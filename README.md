@@ -1,27 +1,45 @@
-# Angular
+# Angular Basic Features
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.4.
+## Folder Structure
+    app
+        core
+            guards
+            interceptors
+            services
+        modules
+            (Grouping by:)
+            - logic or functionality
+            - data
+            components
+            models (interfaces and classes)
+            pages (list of SMART components -- dedicate route in module, call services)
+        shared (DUMB components - presents)
+            components
+            directives
+            models
+            pipes
 
-## Development server
+## Routes (Basic)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Component Interaction
+Input
+Output
+Services
 
-## Code scaffolding
+parent -> child
+child -> parent
+sibling -> sibling (sibling1 -> parent -> sibling2 )
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Directives
+Structural Directives
+ngIf
+ngSwitch
+ngFor
 
-## Build
+Attribute Directives
+ngStyle
+ngClass
+attribute directive
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## npm install   to get node_modules
+## Model View Whatever
