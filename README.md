@@ -43,3 +43,25 @@ attribute directive
 
 ## npm install   to get node_modules
 ## Model View Whatever
+
+## Angular Forms
+## Pipes
+    Data Transformation
+    Built in Pipes
+
+        -DatePipe
+        -UpperCasePipe
+        -LowerCasePipe
+        -CurrencyPipe
+        -DecimalPipe
+        -PercentPipe
+    Custom
+
+# Forms in Angular
+ ## Template Driven Forms (Two Way Binding) Input and Output
+
+ ## Reactive Form
+    FormGroup
+    FormControl
+    FormBuilder
+

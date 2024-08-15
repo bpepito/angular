@@ -1,0 +1,42 @@
+<div>date:
+    <div>no pipe: {{date1}}</div>
+    <div>default: {{date1 | date}}</div>
+    <div>short: {{date1 | date: 'short'}}</div>
+    <div>medium: {{date1 | date: 'medium'}}</div>
+    <div>long: {{date1 | date: 'long'}}</div>
+    <div>shortDate: {{date1 | date: 'shortDate'}}</div>
+    <div>mediumDate: {{date1 | date: 'mediumDate'}}</div>
+    <div>fullDate: {{date1 | date: 'fullDate'}}</div>
+    <div>shortTime: {{date1 | date: 'shortTime'}}</div>
+    <div>mediumTime: {{date1 | date: 'mediumTime'}}</div>
+    <div>longTime: {{date1 | date: 'longTime'}}</div>
+</div>
+<br>
+<div>uppercase:
+    <div>{{myString | uppercase}}</div>
+</div>
+<div>lowercase:
+    <div>{{myString | lowercase}}</div>
+</div>
+<div>
+    <br>
+    <div>chain-fulldate: {{date1 | date:'fullDate' | uppercase}}
+    </div>
+</div>
+<br>
+<div>currency
+    <div>default: {{amount | currency}}</div>
+    <div>PHP: {{amount | currency: 'PHP'}}</div>
+    <div>PHP-symbol-padding: {{amount | currency: 'PHP':'symbol':'4.1-3'}}</div>
+</div>
+<br>
+<div>number:
+    <div>default: {{amount | number}}</div>
+    <div>padding-decimal: {{amount | number: '7.2-2'}}</div>
+</div>
+<br>
+<div>percent:
+    <div>default: {{percent | percent}}</div>
+    <div>padding-decimals: {{percent | percent: '1.2-2'}}</div>
+</div>
+{{toRaise|exponential:7}}

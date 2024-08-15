@@ -7,7 +7,7 @@ import { UserService } from './user/services/user.service';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'angular';
+  // title = 'angular';
   showBlog = true;
 
   constructor(private userService: UserService) {
@@ -18,4 +18,5 @@ export class AppComponent {
     this.showBlog = !this.showBlog;
   }
   payment = 1234;
+  title = 'angular-forms';
 }
