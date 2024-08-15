@@ -17,4 +17,5 @@ export class AppComponent {
   toggleShowBlog() {
     this.showBlog = !this.showBlog;
   }
+  payment = 1234;
 }
