@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HighlightDirective } from './shared/directives/highlight.directive';
 import { SharedModule } from './shared/shared.module';
 import { provideHttpClient } from '@angular/common/http';
+import { UserModule } from "./user/user.module";
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { provideHttpClient } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SharedModule
+    SharedModule,
+    UserModule
 ],
   providers: [
     provideClientHydration(),
