@@ -8,11 +8,13 @@ import { subscribe } from 'diagnostics_channel';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent implements OnInit, OnDestroy{
-  title = 'rxjs-intro';
-  sub: Subscription | undefined;
+export class AppComponent {
+  title = 'angular-projection';
+  name = 'Ronnie';
+  age = 30;
+  // sub: Subscription | undefined;
   
-  ngOnInit(): void {
+  // ngOnInit(): void {
     // of(1, 2, 3, 4, 5, 6).subscribe(data => console.log(data));
     
     // of(1, 2, 3, 4, 5, 6)
@@ -54,9 +56,9 @@ export class AppComponent implements OnInit, OnDestroy{
     // this.sub = interval(1000)
     //   .pipe(skipUntil(frv)).subscribe(data => console.log(data));
 
-    const obs1 = of(1, 2, 3, 4, 5);
-    const obs2 = of(5, 6, 7, 8, 9, 10);
-    const obs3 = of(11, 12, 13, 14, 15);
+    // const obs1 = of(1, 2, 3, 4, 5);
+    // const obs2 = of(5, 6, 7, 8, 9, 10);
+    // const obs3 = of(11, 12, 13, 14, 15);
 
     // obs1
     //   .pipe(concatMap(x => obs2.pipe(map(b => x * b))))
@@ -73,10 +75,10 @@ export class AppComponent implements OnInit, OnDestroy{
     //   )
     // ).subscribe(data => console.log(data));
 
-  }
+  // }
   
-  ngOnDestroy(): void {
-    this.sub?.unsubscribe;
-  }
+  // ngOnDestroy(): void {
+  //   this.sub?.unsubscribe;
+  // }
 
 }

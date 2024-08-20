@@ -5,13 +5,25 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HighlightDirective } from './shared/directives/highlight.directive';
 import { SharedModule } from './shared/shared.module';
-import { provideHttpClient } from '@angular/common/http';
+import { provideHttpClient, withFetch } from '@angular/common/http';
 import { UserModule } from "./user/user.module";
+import { SingleSlotComponent } from './single-slot/single-slot.component';
+import { MultiSlotComponent } from './multi-slot/multi-slot.component';
+import { TemplateExampleComponent } from './template-example/template-example.component';
+import { ChildComponent } from './child/child.component';
+import { ViewExampleComponent } from './view-example/view-example.component';
+import { ChildContentComponent } from './child-content/child-content.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HighlightDirective
+    HighlightDirective,
+    SingleSlotComponent,
+    MultiSlotComponent,
+    TemplateExampleComponent,
+    ChildComponent,
+    ViewExampleComponent,
+    ChildContentComponent
   ],
   imports: [
     BrowserModule,
@@ -21,7 +33,7 @@ import { UserModule } from "./user/user.module";
 ],
   providers: [
     provideClientHydration(),
-    provideHttpClient(),
+    provideHttpClient(withFetch()),
   ],
   bootstrap: [AppComponent]
 })

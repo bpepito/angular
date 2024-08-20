@@ -1,5 +1,5 @@
-import { Injectable } from '@angular/core';
-import { map, Observable, of, tap } from 'rxjs';
+import { Injectable, OnInit } from '@angular/core';
+import { BehaviorSubject, map, Observable, of, ReplaySubject, Subject, tap } from 'rxjs';
 import { User } from '../../shared/models/user';
 import { HttpClient } from '@angular/common/http';
 
@@ -8,6 +8,9 @@ import { HttpClient } from '@angular/common/http';
 })
 export class UserService {
   serverUrl = 'http://localhost:3000';
+  subject = new Subject();
+  behavior = new BehaviorSubject('John');
+  replay = new ReplaySubject(3);
 
   constructor(private http: HttpClient) {}
 
